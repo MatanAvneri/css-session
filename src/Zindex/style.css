@@ -1,0 +1,39 @@
+.z-parent {
+  position: relative;
+  border: 2px dashed black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  z-index: 1;
+  background: blue; }
+  .z-parent .z-child1 {
+    position: relative;
+    border: 2px dashed black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background: yellow;
+    z-index: 10; }
+  .z-parent .z-child2 {
+    position: relative;
+    border: 2px dashed black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    background: green;
+    z-index: 20; }
+
+.z-brother {
+  position: relative;
+  border: 2px dashed black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  left: -50px;
+  z-index: 2;
+  background: red;
+  border-color: blue; }

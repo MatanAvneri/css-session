@@ -1,0 +1,36 @@
+@mixin square ($dim) {
+    position: relative;
+    border: 2px dashed black;
+    width: $dim;
+    height: $dim;
+    display: inline-block;
+}
+
+.z-parent {
+    @include square(200px);
+    z-index: 1;
+    background: blue;
+
+    .z-child1 {
+        @include square(100px);
+        position: absolute;
+        left: 0;
+        background: yellow;
+        z-index: 10;
+    }
+    .z-child2 {
+        @include square(100px);
+        position: absolute;
+        right: 20px;
+        background: green;
+        z-index: 20;
+    }
+}
+
+.z-brother {
+    @include square(200px);
+    left: -50px;
+    z-index: 2;
+    background: red;
+    border-color: blue;
+}
