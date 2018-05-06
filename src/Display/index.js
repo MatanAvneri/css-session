@@ -7,20 +7,23 @@ export default class Display extends Component {
         this.state = {
             inline: {
                 height: 0,
-                width: 0
+                width: 0,
+                dimensions: false
             },
             inlineBlock: {
                 height: 40,
-                width: 200
+                width: 200,
+                dimensions: false
             },
             block: {
                 height: 40,
-                width: 330
+                width: 330,
+                dimensions: false
             }
         }
     }
 
-    dimensions(key) {
+    dimensions(key, disabled) {
         const onChange = (e, dim) => {
             this.setState({
                 [key]: {
@@ -33,9 +36,11 @@ export default class Display extends Component {
             <div>
                 width: <input type="number"
                     value={this.state[key].width}
+                    disabled={disabled}
                     onChange={(e) => onChange(e, 'width')} />
                 height: <input type="number"
                     value={this.state[key].height}
+                    disabled={disabled}
                     onChange={(e) => onChange(e, 'height')} />
             </div>
         )
@@ -43,11 +48,25 @@ export default class Display extends Component {
     }
 
     section(key) {
+        const isDimension = this.state[key].dimensions
         return (
             <div>
                 <h1>{key}</h1>
-                <span style={{ background: 'lavender' ,width: this.state[key].width, height: this.state[key].height }}>try to change my dimensions</span>
+                <span style={{
+                    background: 'lavender',
+                    width: isDimension ? this.state[key].width : undefined,
+                    height: isDimension ? this.state[key].height : undefined
+                }}>try to change my dimensions</span>
                 {this.dimensions(key)}
+                <input type='checkbox'
+                    checked={isDimension}
+                    onChange={(e) => this.setState({
+                        [key]: {
+                            ...this.state[key],
+                            dimensions: e.target.checked
+                        }
+                    })} />
+                Get Input Dimensions
             </div>
         )
     }
