@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './style.css'
 
 export default class Display extends Component {
     constructor(props) {
@@ -74,7 +74,7 @@ export default class Display extends Component {
 
     render() {
         return (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridRowGap: '10px', gridColumnGap: '10px' }}>
+            <div className='display-grid'>
                 {this.section('inline', <span>try to change my dimensions</span>)}
                 {this.section('inlineBlock', <button>try to change my dimensions</button>)}
                 {this.section('block', <div>try to change my dimensions</div>)}
