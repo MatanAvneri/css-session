@@ -18,7 +18,7 @@ export default function Specificity() {
             <br />
             <br />
             <br />
-            <a href="https://specificity.keegan.st/" target="_blank">https://specificity.keegan.st</a>
+            <a href="https://specificity.keegan.st/" target="_blank" rel="noopener noreferrer">https://specificity.keegan.st</a>
         </Fragment>
     )
 }

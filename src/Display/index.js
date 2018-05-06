@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 
 
 export default class Display extends Component {
@@ -28,7 +28,7 @@ export default class Display extends Component {
             this.setState({
                 [key]: {
                     ...this.state[key],
-                    [dim]: parseInt(e.target.value)
+                    [dim]: parseInt(e.target.value, 10)
                 }
             })
         }

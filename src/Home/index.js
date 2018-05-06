@@ -1,7 +1,8 @@
 import React from 'react'
+import './style.css'
 
 export default function Home() {
     return (
-        <div>home</div>
+        <div id='logo'>Welcome to css</div>
     )
 }

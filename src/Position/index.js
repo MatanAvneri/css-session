@@ -29,7 +29,7 @@ export default class Home extends Component {
             this.setState({
                 [key]: {
                     ...this.state[key],
-                    [dim]: parseInt(e.target.value)
+                    [dim]: parseInt(e.target.value, 10)
                 }
             })
         }
