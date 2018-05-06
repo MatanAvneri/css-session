@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './style.css'
 
 export default class Display extends Component {
@@ -74,16 +74,30 @@ export default class Display extends Component {
 
     render() {
         return (
-            <div className='display-grid'>
-                {this.section('inline', <span>try to change my dimensions</span>)}
-                {this.section('inlineBlock', <button>try to change my dimensions</button>)}
-                {this.section('block', <div>try to change my dimensions</div>)}
-                <div>
-                    <h1>none</h1>
-                    <div style={{ display: 'none' }}>pick a boo</div>
-                    <div style={{ visibility: 'hidden' }}>pick a boo</div>
+            <Fragment>
+                <div className='display-grid'>
+                    {this.section('inline', <span>try to change my dimensions</span>)}
+                    {this.section('inlineBlock', <button>try to change my dimensions</button>)}
+                    {this.section('block', <div>try to change my dimensions</div>)}
+                    <div>
+                        <h1>none</h1>
+                        <div style={{ display: 'none' }}>pick a boo</div>
+                        <div style={{ visibility: 'hidden' }}>pick a boo</div>
+                    </div>
                 </div>
-            </div>
+                <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    Further Reading:
+                    <br />
+                    Flex Froggy - <a target='_blank' rel="noopener noreferrer" href='https://flexboxfroggy.com/'>https://flexboxfroggy.com/</a>
+                    <br />
+                    Css Grid - <a target='_blank' rel="noopener noreferrer" href='https://learncssgrid.com/'>https://learncssgrid.com/</a>
+                </div>
+            </Fragment>
         )
     }
 }
