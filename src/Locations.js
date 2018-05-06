@@ -4,6 +4,7 @@ import Specificity from './Specificity';
 import Display from './Display';
 import Zindex from './Zindex';
 import Sass from './Sass';
+import Modal from './Modal';
 
 export default [
     {
@@ -35,5 +36,10 @@ export default [
         path: "/sass",
         text: 'sass',
         component: Sass  
+    },
+    {
+        path: "/modal",
+        text: 'modal',
+        component: Modal  
     },
 ]
