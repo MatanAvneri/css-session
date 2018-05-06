@@ -43,42 +43,37 @@ export default class Home extends Component {
                     onChange={(e) => onChange(e, 'y')} />
             </div>
         )
+    }
 
+    section = (key) => {
+        return (
+            <Fragment>
+                <h1>{key}</h1>
+                <div className={key} style={{
+                    left: this.state[key].x,
+                    top: this.state[key].y
+                }}>try to change my position</div>
+            </Fragment>
+        )
     }
 
     render() {
         return (
             <Fragment>
                 <div>
-                    <h1>sticky</h1>
-                    <div className='sticky' style={{
-                        left: this.state.sticky.x,
-                        top: this.state.sticky.y
-                    }}>try to change my position</div>
+                    {this.section('sticky')}
                     {this.position('sticky')}
                 </div>
                 <div>
-                    <h1>static</h1>
-                    <div className='static' style={{
-                        left: this.state.static.x,
-                        top: this.state.static.y
-                    }}>try to change my position</div>
+                    {this.section('static')}
                     {this.position('static')}
                 </div>
                 <div>
-                    <h1>relative</h1>
-                    <div className='relative' style={{
-                        left: this.state.relative.x,
-                        top: this.state.relative.y
-                    }}>try to change my position</div>
+                    {this.section('relative')}
                     {this.position('relative')}
                 </div>
                 <div style={{ position: this.state.relativeParent ? 'relative' : 'static' }}>
-                    <h1>abosolute</h1>
-                    <div className='abosolute' style={{
-                        left: this.state.abosolute.x,
-                        top: this.state.abosolute.y
-                    }}>try to change my position</div>
+                    {this.section('abosolute')}
                     {this.position('abosolute')}
                     <input type='checkbox' checked={this.state.relativeParent} onChange={(e) => this.setState({
                         relativeParent: e.target.checked

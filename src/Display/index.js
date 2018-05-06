@@ -42,28 +42,26 @@ export default class Display extends Component {
 
     }
 
+    section(key) {
+        return (
+            <div>
+                <h1>{key}</h1>
+                <span style={{ background: 'lavender' ,width: this.state[key].width, height: this.state[key].height }}>try to change my dimensions</span>
+                {this.dimensions(key)}
+            </div>
+        )
+    }
+
     render() {
         return (
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridRowGap: '10px', gridColumnGap: '10px'}}>
-                <div>
-                    <h1>inline</h1>
-                    <span style={{ width: this.state.inline.width, height: this.state.inline.height }}>try to change my dimensions</span>
-                    {this.dimensions('inline')}
-                </div>
-                <div>
-                    <h1>inline-block</h1>
-                    <button style={{ width: this.state.inlineBlock.width, height: this.state.inlineBlock.height }}>try to change my dimensions</button>
-                    {this.dimensions('inlineBlock')}
-                </div>
-                <div>
-                    <h1>block</h1>
-                    <div style={{ width: this.state.block.width, height: this.state.block.height }}>try to change my dimensions</div>
-                    {this.dimensions('block')}
-                </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridRowGap: '10px', gridColumnGap: '10px' }}>
+                {this.section('inline')}
+                {this.section('inlineBlock')}
+                {this.section('block')}
                 <div>
                     <h1>none</h1>
-                    <div style={{ display: 'none' }}>try to change my dimensions</div>
-                    <div style={{ visibility: 'hidden' }}>try to change my dimensions</div>
+                    <div style={{ display: 'none' }}>pick a boo</div>
+                    <div style={{ visibility: 'hidden' }}>pick a boo</div>
                 </div>
             </div>
         )
