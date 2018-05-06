@@ -50,7 +50,7 @@ export default class Display extends Component {
     section(key, children) {
         const isDimension = this.state[key].dimensions
         const style = {
-            background: 'lavender',
+            background: '#44ca67',
             width: isDimension ? this.state[key].width : undefined,
             height: isDimension ? this.state[key].height : undefined
         }
