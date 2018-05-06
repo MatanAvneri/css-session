@@ -18,6 +18,10 @@ export default class Home extends Component {
                 x: 0,
                 y: 0
             },
+            fixed: {
+                x: 400,
+                y: 20
+            },
             sticky: {
                 x: 0,
                 y: 0
@@ -71,6 +75,10 @@ export default class Home extends Component {
                 <div>
                     {this.section('relative')}
                     {this.position('relative')}
+                </div>
+                <div>
+                    {this.section('fixed')}
+                    {this.position('fixed')}
                 </div>
                 <div style={{ position: this.state.relativeParent ? 'relative' : 'static' }}>
                     {this.section('abosolute')}
