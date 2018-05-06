@@ -1,0 +1,10 @@
+.sas-grid {
+  display: grid;
+  grid-template-columns: 520px 520px;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px; }
+  .sas-grid div {
+    background: lightblue; }
+  @media only screen and (max-width: 1200px) {
+    .sas-grid div {
+      background: blue; } }

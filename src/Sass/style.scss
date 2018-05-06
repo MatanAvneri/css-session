@@ -1,0 +1,23 @@
+$breaking-point: 1200px;
+
+@mixin small-resolution {
+    @media only screen and (max-width: $breaking-point) {
+        @content;
+    }
+}
+
+.sas-grid {
+    display: grid;
+    grid-template-columns: 520px 520px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    div {
+        background: lightblue;
+    }
+
+    @include small-resolution {
+        div {
+            background: blue;
+        }
+    }
+}

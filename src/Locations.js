@@ -3,6 +3,7 @@ import Position from './Position'
 import Specificity from './Specificity';
 import Display from './Display';
 import Zindex from './Zindex';
+import Sass from './Sass';
 
 export default [
     {
@@ -29,5 +30,10 @@ export default [
         path: "/zindex",
         text: 'Z-Index',
         component: Zindex
+    },
+    {
+        path: "/sass",
+        text: 'sass',
+        component: Sass  
     },
 ]
