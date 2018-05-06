@@ -47,16 +47,17 @@ export default class Display extends Component {
 
     }
 
-    section(key) {
+    section(key, children) {
         const isDimension = this.state[key].dimensions
+        const style = {
+            background: 'lavender',
+            width: isDimension ? this.state[key].width : undefined,
+            height: isDimension ? this.state[key].height : undefined
+        }
         return (
             <div>
                 <h1>{key}</h1>
-                <span style={{
-                    background: 'lavender',
-                    width: isDimension ? this.state[key].width : undefined,
-                    height: isDimension ? this.state[key].height : undefined
-                }}>try to change my dimensions</span>
+                {React.cloneElement(children, { style })}
                 {this.dimensions(key)}
                 <input type='checkbox'
                     checked={isDimension}
@@ -74,9 +75,9 @@ export default class Display extends Component {
     render() {
         return (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gridRowGap: '10px', gridColumnGap: '10px' }}>
-                {this.section('inline')}
-                {this.section('inlineBlock')}
-                {this.section('block')}
+                {this.section('inline', <span>try to change my dimensions</span>)}
+                {this.section('inlineBlock', <button>try to change my dimensions</button>)}
+                {this.section('block', <div>try to change my dimensions</div>)}
                 <div>
                     <h1>none</h1>
                     <div style={{ display: 'none' }}>pick a boo</div>
