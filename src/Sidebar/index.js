@@ -1,22 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Locations from '../Locations'
 import './style.css'
 
 export default function Sidebar() {
     return (
         <ul className='sidebar'>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/position">Position</Link>
-            </li>
-            <li>
-                <Link to="/specificity">Specificity</Link>
-            </li>
-            <li>
-                <Link to="/display">Display</Link>
-            </li>
+            {
+                Locations.map((loc) => {
+                    return (
+                        <li key={loc.path}>
+                            <Link to={loc.path}>{loc.text}</Link>
+                        </li>
+                    )
+                })
+            }
         </ul>
     )
 }

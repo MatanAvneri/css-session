@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from './Home'
-import Position from './Position'
-import Specificity from './Specificity';
-import Display from './Display';
+import Locations from './Locations'
 
 import Sidebar from './Sidebar'
 
@@ -16,10 +13,13 @@ class App extends Component {
           <Sidebar />
 
           <div className='content'>
-            <Route exact path="/" component={Home} />
-            <Route path="/position" component={Position} />
-            <Route path="/specificity" component={Specificity} />
-            <Route path="/display" component={Display} />
+            {
+              Locations.map((loc) => {
+                return (
+                  <Route key={loc.path} exact path={loc.path} component={loc.component} />
+                )
+              })
+            }
           </div>
         </div>
       </Router>
