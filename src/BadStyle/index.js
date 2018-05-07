@@ -4,7 +4,7 @@ export default class BadStyle extends Component {
     componentDidMount() {
         // Grab the first sheet, regardless of media
         const sheet = document.styleSheets[0];
-        sheet.addRule("*", "color: lightcoral !important;", 1);
+        sheet.addRule("*", "color: lightcoral !important;");
     }
     render() {
         return (
