@@ -5,12 +5,18 @@ import Display from './Display';
 import Zindex from './Zindex';
 import Sass from './Sass';
 import Modal from './Modal';
+import BadStyle from './BadStyle';
 
 export default [
     {
         path: "/",
         text: 'Home',
         component: Home
+    },
+    {
+        path: "/badstyle",
+        text: 'Bad Style',
+        component: BadStyle
     },
     {
         path: "/position",
