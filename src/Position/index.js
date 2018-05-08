@@ -56,7 +56,7 @@ export default class Home extends Component {
                 <div className={key} style={{
                     left: this.state[key].x,
                     top: this.state[key].y
-                }}>try to change my position</div>
+                }}>{key} - try to change my position</div>
             </Fragment>
         )
     }

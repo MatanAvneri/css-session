@@ -1,11 +1,14 @@
-div {
-  color: black; }
+.important-test-class {
+  color: yellowgreen !important; }
 
-[test_attr] {
-  color: red; }
+#testId {
+  color: green; }
 
 .test-class {
   color: blue; }
 
-#testId {
-  color: green; }
+[test_attr] {
+  color: red; }
+
+div {
+  color: black; }
