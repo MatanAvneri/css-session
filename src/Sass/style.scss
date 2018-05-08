@@ -21,3 +21,11 @@ $breaking-point: 1200px;
         }
     }
 }
+
+.sass-text {
+    @include small-resolution {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }    
+}

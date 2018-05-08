@@ -10,5 +10,4 @@
 
 .move .move-transform {
   background: blue;
-  transform: translate(20px, -20px);
-  transform: skew(25deg) rotate(25deg) translate(50px, 50px); }
+  transform: translate(20px, -20px); }

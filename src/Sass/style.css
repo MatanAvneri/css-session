@@ -8,3 +8,9 @@
   @media only screen and (max-width: 1200px) {
     .sas-grid div {
       background: blue; } }
+
+@media only screen and (max-width: 1200px) {
+  .sass-text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; } }
