@@ -6,6 +6,7 @@ import Zindex from './Zindex';
 import Sass from './Sass';
 import Modal from './Modal';
 import BadStyle from './BadStyle';
+import Movement from './Movement';
 
 export default [
     {
@@ -42,6 +43,11 @@ export default [
         path: "/sass",
         text: 'sass',
         component: Sass  
+    },
+    {
+        path: "/move",
+        text: 'movement',
+        component: Movement  
     },
     {
         path: "/modal",
