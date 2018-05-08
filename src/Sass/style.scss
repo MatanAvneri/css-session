@@ -29,3 +29,13 @@ $breaking-point: 1200px;
         overflow: hidden;
     }    
 }
+
+.sass-pseudo {
+    margin-top: 60px;
+    &:before {
+        content: 'Hi I\'m before, ';
+    }
+    &:after {
+        content: 'Hi I\'m after';
+    }
+}

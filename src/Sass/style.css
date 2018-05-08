@@ -14,3 +14,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; } }
+
+.sass-pseudo {
+  margin-top: 60px; }
+  .sass-pseudo:before {
+    content: 'Hi I\'m before, '; }
+  .sass-pseudo:after {
+    content: 'Hi I\'m after'; }
