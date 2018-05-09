@@ -21,3 +21,19 @@
     content: 'Hi I\'m before, '; }
   .sass-pseudo:after {
     content: 'Hi I\'m after'; }
+
+.sass-box {
+  display: flex;
+  flex-direction: column; }
+  .sass-box div {
+    background: aquamarine;
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border: 1px dashed black; }
+  .sass-box div:first-child {
+    box-sizing: border-box;
+    margin-bottom: 10px; }
+  .sass-box div:last-child {
+    box-sizing: content-box; }

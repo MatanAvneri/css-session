@@ -39,3 +39,25 @@ $breaking-point: 1200px;
         content: 'Hi I\'m after';
     }
 }
+
+.sass-box {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        background: aquamarine;
+        display: inline-block;
+        width: 400px;
+        height: 50px;
+        padding: 10px;
+        border: 1px dashed black;
+    }
+
+    div:first-child {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    div:last-child {
+        box-sizing: content-box;
+    }
+}
