@@ -19,6 +19,8 @@ export default function Sass() {
                 <div>border-box</div>
                 <div>content-box</div>
             </div>
+            <div className='sass-transition'>transition</div>
+            <div className='sass-keyframes'>keyframes</div>
         </Fragment>
     )
 }

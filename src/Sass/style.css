@@ -37,3 +37,24 @@
     margin-bottom: 10px; }
   .sass-box div:last-child {
     box-sizing: content-box; }
+
+.sass-transition {
+  border: 1px dashed darkgoldenrod;
+  transition: 5s all;
+  width: 20%; }
+  @media only screen and (max-width: 1200px) {
+    .sass-transition {
+      width: 100%; } }
+
+.sass-keyframes {
+  position: absolute;
+  animation: scale 4s linear infinite; }
+
+@keyframes scale {
+  0%, 50% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    transform: scale(1.4);
+    opacity: 0; } }
