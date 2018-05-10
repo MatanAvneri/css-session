@@ -21,6 +21,7 @@ export default function Sass() {
             </div>
             <div className='sass-transition'>transition</div>
             <div className='sass-keyframes'>keyframes</div>
+            <div className='sass-keyframes-paint'>keyframes-paint</div>
         </Fragment>
     )
 }
