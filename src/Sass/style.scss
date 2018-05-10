@@ -87,6 +87,25 @@ $breaking-point: 1200px;
       }
 
       position: absolute;
-    
+
       animation: scale 4s linear infinite;
+}
+.sass-keyframes-paint {
+    @keyframes scale-paint {
+        0%, 50% {
+        opacity: 1;
+        }
+        80% {
+        opacity: 0;
+        }
+        100% {
+        font-size: 17px;
+        opacity: 0;
+        }
+      }
+
+      position: absolute;
+      left: 50%;
+    
+      animation: scale-paint 4s linear infinite;
 }
