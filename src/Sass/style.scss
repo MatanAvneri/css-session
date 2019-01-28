@@ -1,114 +1,118 @@
 $breaking-point: 1200px;
 
 @mixin small-resolution {
-    @media only screen and (max-width: $breaking-point) {
-        @content;
-    }
+  @media only screen and (max-width: $breaking-point) {
+    @content;
+  }
 }
 
 .sas-grid {
-    display: grid;
-    grid-template-columns: 520px 520px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    div {
-        background: lightblue;
-    }
+  display: grid;
+  grid-template-columns: 520px 520px;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
 
-    @include small-resolution {
-        div {
-            background: blue;
-        }
+  div {
+    background: lightblue;
+  }
+
+  @include small-resolution {
+    div {
+      background: blue;
     }
+  }
 }
 
 .sass-text {
-    @include small-resolution {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }    
+  @include small-resolution {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .sass-pseudo {
-    margin-top: 60px;
-    &:before {
-        content: 'Hi I\'m before, ';
-    }
-    &:after {
-        content: 'Hi I\'m after';
-    }
+  margin-top: 60px;
+
+  &:before {
+    content: 'Hi I\'m before, ';
+  }
+
+  &:after {
+    content: 'Hi I\'m after';
+  }
 }
 
 .sass-box {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    div {
-        background: aquamarine;
-        display: inline-block;
-        width: 400px;
-        height: 50px;
-        padding: 10px;
-        border: 1px dashed black;
-    }
+  div {
+    background: aquamarine;
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    border: 1px dashed black;
+  }
 
-    div:first-child {
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-    
-    div:last-child {
-        box-sizing: content-box;
-    }
+  div:first-child {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  div:last-child {
+    box-sizing: content-box;
+  }
 }
 
 .sass-transition {
-    border: 1px dashed darkgoldenrod;
-    transition: 5s width;
-    width: 20%;
-    height: 30px;
+  border: 1px dashed darkgoldenrod;
+  transition: 5s width;
+  width: 20%;
+  height: 30px;
 
-    @include small-resolution {
-        width: 100%;
-        height: 30px;
-    }    
+  @include small-resolution {
+    width: 100%;
+    height: 30px;
+  }
 }
 
 .sass-keyframes {
-    @keyframes scale {
-        0%, 50% {
-        opacity: 1;
-        }
-        80% {
-        opacity: 0;
-        }
-        100% {
-        transform: scale(1.4);
-        opacity: 0;
-        }
-      }
+  @keyframes scale {
+    0%, 50% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
 
-      position: absolute;
+  position: absolute;
 
-      animation: scale 4s linear infinite;
+  animation: scale 4s linear infinite;
 }
-.sass-keyframes-paint {
-    @keyframes scale-paint {
-        0%, 50% {
-        opacity: 1;
-        }
-        80% {
-        opacity: 0;
-        }
-        100% {
-        font-size: 17px;
-        opacity: 0;
-        }
-      }
 
-      position: absolute;
-      left: 50%;
-    
-      animation: scale-paint 4s linear infinite;
+.sass-keyframes-paint {
+  @keyframes scale-paint {
+    0%, 50% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      font-size: 17px;
+      opacity: 0;
+    }
+  }
+
+  position: absolute;
+  left: 50%;
+
+  animation: scale-paint 4s linear infinite;
 }
