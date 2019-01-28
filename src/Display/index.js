@@ -109,8 +109,8 @@ export default class Display extends Component {
           Flex Froggy - <a target='_blank' rel="noopener noreferrer"
                            href='https://flexboxfroggy.com/'>https://flexboxfroggy.com/</a>
           <br/>
-          Css Grid - <a target='_blank' rel="noopener noreferrer"
-                        href='https://learncssgrid.com/'>https://learncssgrid.com/</a>
+          Css Grid Garden - <a target='_blank' rel="noopener noreferrer"
+                        href='http://cssgridgarden.com/'>http://cssgridgarden.com//</a>
         </div>
       </Fragment>
     )
