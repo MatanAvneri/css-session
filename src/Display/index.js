@@ -57,6 +57,7 @@ export default class Display extends Component {
       width: isDimension ? this.state[key].width : undefined,
       height: isDimension ? this.state[key].height : undefined
     }
+    const cbId = `${key}_cb`
     return (
       <div style={ {
         display: 'flex',
@@ -66,7 +67,7 @@ export default class Display extends Component {
         <div>
           { React.cloneElement(children, { style }) }
           { this.dimensions(key) }
-          <input type='checkbox'
+          <input id={cbId} type='checkbox'
                  checked={ isDimension }
                  onChange={ (e) => this.setState({
                    [key]: {
@@ -74,7 +75,7 @@ export default class Display extends Component {
                      dimensions: e.target.checked
                    }
                  }) }/>
-          Get Input Dimensions
+          <label for={cbId}>Get Input Dimensions</label>
         </div>
       </div>
     )
